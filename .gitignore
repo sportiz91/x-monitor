@@ -1,0 +1,6 @@
+.env
+*.har
+research/
+__pycache__/
+*.pyc
+*.db

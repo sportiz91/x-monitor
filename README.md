@@ -87,6 +87,7 @@ x_api/
   timelines.py  pure parsers: instructions→entries→tweet_results|user_results (+ tweet/user)
   models.py     Tweet / XUser (flat dataclasses)
   ops.json      per-op queryId + the ~39 features x.com validates + variables template
+docs/SURFACES.md  how each surface was reverse-engineered (+ the search endpoint in full)
 research/       captured HARs (gitignored; contain session cookies)
 ```
 
@@ -99,6 +100,9 @@ IP works). X validates the header's *content* (a random one 404s) but not its fr
 (a 2-hour-old captured one still works), so a captured `X_TX_ID` is reusable until it rots.
 A proper runtime generator (from the JS bundle + animation SVG) is a future addition if
 search becomes central.
+
+**Full reversing notes** — the controlled tests that isolated each wall, the shared
+timeline envelope, and op discovery — are in [`docs/SURFACES.md`](docs/SURFACES.md).
 
 ## Responsible use
 
